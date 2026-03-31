@@ -55,6 +55,8 @@ jobs:
           fi
 
           IFS=',' read -r -a repos <<< "${DOCKERHUB_REPOS:?DOCKERHUB_REPOS is required}"
+          today="$(date -u +%Y-%m-%d)"
+          now="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 
           for full in "${repos[@]}"; do
             repo="$(echo "$full" | xargs)"
@@ -73,16 +75,23 @@ jobs:
             star_count="$(jq -r '.star_count // 0' <<< "$json")"
             created_at="$(jq -r '.date_registered // empty' <<< "$json")"
             last_updated="$(jq -r '.last_updated // ""' <<< "$json")"
-            now="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 
-            # если по репе нет записей → добавляем нулевую точку
+            # если по репе ещё нет записей — добавляем стартовую точку
             if ! awk -F, -v repo="$repo" 'NR > 1 && $2 == repo { found=1; exit } END { exit !found }' "$OUT"; then
               if [[ -n "$created_at" ]]; then
                 echo "$created_at,$repo,0,0," >> "$OUT"
               fi
             fi
 
-            # текущий снапшот
+            # если за сегодня по этой репе уже есть запись — пропускаем
+            if awk -F, -v repo="$repo" -v today="$today" '
+              NR > 1 && $2 == repo && index($1, today) == 1 { found=1; exit }
+              END { exit !found }
+            ' "$OUT"; then
+              echo "Skip duplicate for $repo on $today"
+              continue
+            fi
+
             echo "$now,$repo,$pull_count,$star_count,$last_updated" >> "$OUT"
           done
 
