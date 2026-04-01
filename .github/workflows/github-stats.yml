@@ -1,8 +1,8 @@
-name: dockerhub-stats
+name: github-stats
 
 on:
   schedule:
-    - cron: "55 2,4 * * *"
+    - cron: "25 3,5 * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NODE_ENV: production
-      STATS_CSV: stats/dockerhub.csv
-      STATS_SVG: svg/gripmock-downloads.svg
-      DOCKERHUB_REPOS: bavix/gripmock,tkpd/gripmock
-      DOCKERHUB_CHART_TITLE: GripMock Docker Hub Downloads
-      DOCKERHUB_CHART_COLORS: bavix/gripmock=#34d399,#059669;tkpd/gripmock=#f59e0b,#d97706
-      DOCKERHUB_SOURCE_URL: https://github.com/bavix/artifact-stats/blob/master/stats/dockerhub.csv
+      GITHUB_STATS_CSV: stats/github.csv
+      GITHUB_REPOS: bavix/gripmock,tokopedia/gripmock
+      GITHUB_SVG_DIR: svg
+      GITHUB_SVG_PREFIX: github
+      GITHUB_CHART_TITLE: GripMock GitHub Metrics
+      GITHUB_CHART_COLORS: bavix/gripmock=#34d399,#059669;tokopedia/gripmock=#f59e0b,#d97706
+      GITHUB_SOURCE_URL: https://github.com/bavix/artifact-stats/blob/master/stats/github.csv
 
     steps:
       - uses: actions/checkout@v6
@@ -29,14 +29,13 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Collect Docker Hub stats
+      - name: Collect GitHub stats
         env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          DOCKERHUB_PAT: ${{ secrets.DOCKERHUB_PAT }}
-        run: python3 collect_dockerhub_stats.py --output "$STATS_CSV" --repos "$DOCKERHUB_REPOS"
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: python3 collect_github_stats.py --output "$GITHUB_STATS_CSV" --repos "$GITHUB_REPOS"
 
-      - name: Generate Docker Hub SVG
-        run: python3 generate_dockerhub_chart.py --input "$STATS_CSV" --output "$STATS_SVG" --title "$DOCKERHUB_CHART_TITLE" --source-label "$DOCKERHUB_SOURCE_URL" --colors "$DOCKERHUB_CHART_COLORS"
+      - name: Generate GitHub SVGs
+        run: python3 generate_github_charts.py --input "$GITHUB_STATS_CSV" --output-dir "$GITHUB_SVG_DIR" --output-prefix "$GITHUB_SVG_PREFIX" --title "$GITHUB_CHART_TITLE" --source-label "$GITHUB_SOURCE_URL" --colors "$GITHUB_CHART_COLORS"
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v7
@@ -56,14 +55,14 @@ jobs:
         run: |
           set -euo pipefail
 
-          git add "$STATS_CSV" "$STATS_SVG"
+          git add "$GITHUB_STATS_CSV" "$GITHUB_SVG_DIR/$GITHUB_SVG_PREFIX-stars.svg" "$GITHUB_SVG_DIR/$GITHUB_SVG_PREFIX-forks.svg"
 
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
 
-          git commit -S -m "chore(stats): update dockerhub stats"
+          git commit -S -m "chore(stats): update github stats"
 
       - name: Push changes
         env:
