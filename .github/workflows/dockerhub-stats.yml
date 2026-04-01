@@ -2,7 +2,7 @@ name: dockerhub-stats
 
 on:
   schedule:
-    - cron: "15 2 * * *"
+    - cron: "55 2,4 * * *"
   workflow_dispatch:
 
 permissions:
