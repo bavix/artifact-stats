@@ -60,6 +60,21 @@ def append_rows(path: Path, rows: List[List[str]]) -> None:
         writer.writerows(rows)
 
 
+def should_append_row(
+    repo_rows: List[Dict[str, str]],
+    stars: str,
+    forks: str,
+) -> bool:
+    if len(repo_rows) < 2:
+        return True
+
+    last = repo_rows[-1]
+    prev = repo_rows[-2]
+    same_as_last = last.get("stars", "") == stars and last.get("forks", "") == forks
+    same_as_prev = prev.get("stars", "") == stars and prev.get("forks", "") == forks
+    return not (same_as_last and same_as_prev)
+
+
 def parse_repos(value: str) -> List[str]:
     repos = [repo.strip() for repo in value.split(",") if repo.strip()]
     if not repos:
@@ -170,7 +185,18 @@ def main() -> None:
             print(f"Skip duplicate for {repo} on {today}")
             continue
 
-        pending_rows.append([now, repo, stars, forks])
+        repo_existing = [row for row in existing if row.get("repo", "") == repo]
+        repo_pending = [
+            dict(zip(CSV_HEADER, row))
+            for row in pending_rows
+            if len(row) == len(CSV_HEADER) and row[1] == repo
+        ]
+        repo_rows = repo_existing + repo_pending
+
+        if should_append_row(repo_rows, stars, forks):
+            pending_rows.append([now, repo, stars, forks])
+        else:
+            print(f"Skip flat-run duplicate for {repo}")
 
     append_rows(output_path, pending_rows)
     if pending_rows:
