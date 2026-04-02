@@ -7,7 +7,12 @@ Collect Docker Hub and GitHub stats into CSV files and render SVG charts.
 - appends Docker Hub snapshots to `stats/dockerhub.csv`
 - appends GitHub snapshots (stars/forks) to `stats/github.csv`
 - generates SVG charts into `svg/`
+- generates a weekly markdown changelog in `WEEKLY.md`
 - runs automatically via GitHub Actions and commits updates
+
+CSV compaction:
+
+- collectors automatically collapse flat runs of 3+ identical snapshots per repo/metric into 2 boundary points (first + latest), reducing noise and chart markers
 
 ## Scripts
 
@@ -15,6 +20,7 @@ Collect Docker Hub and GitHub stats into CSV files and render SVG charts.
 - `generate_dockerhub_chart.py` - renders Docker Hub pull chart SVG
 - `collect_github_stats.py` - fetches GitHub stars/forks and appends rows
 - `generate_github_charts.py` - generates 2 SVG files (stars, forks)
+- `weekly_log.py` - generates weekly report section in `WEEKLY.md`
 
 ## Local usage
 
@@ -54,6 +60,21 @@ python3 generate_github_charts.py \
   --colors "bavix/gripmock=#34d399,#059669;tokopedia/gripmock=#f59e0b,#d97706"
 ```
 
+Generate weekly report:
+
+```bash
+python3 weekly_log.py \
+  --github stats/github.csv \
+  --docker stats/dockerhub.csv \
+  --output WEEKLY.md
+```
+
+Behavior:
+
+- if `WEEKLY.md` does not exist, script creates it
+- if weekly report for the same ISO week already exists, script skips
+- otherwise the new section is inserted at the top (latest first)
+
 `collect_github_stats.py` skips repositories that return `404` from GitHub API (for example, if the repo does not exist or is private and token has no access).
 History for stars/forks is backfilled only when the CSV file does not exist yet (first run).
 
@@ -88,3 +109,5 @@ Also set secrets if you need authenticated Docker Hub API access:
 - `DOCKERHUB_USERNAME`
 - `DOCKERHUB_PAT`
 - `BOT_TOKEN`, `GPG_BOT`, `GPG_PASSPHRASE`, `GPG_FINGERPRINT` for signed auto-commits
+
+Weekly automation is configured in `.github/workflows/weekly.yml`.

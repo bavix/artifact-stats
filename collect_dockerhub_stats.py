@@ -78,6 +78,25 @@ def append_rows(path: Path, rows: List[List[str]]) -> None:
         writer.writerows(rows)
 
 
+def should_append_row(
+    repo_rows: List[Dict[str, str]],
+    pull_count: str,
+    star_count: str,
+) -> bool:
+    if len(repo_rows) < 2:
+        return True
+
+    last = repo_rows[-1]
+    prev = repo_rows[-2]
+    same_as_last = (
+        last.get("pull_count", "") == pull_count and last.get("star_count", "") == star_count
+    )
+    same_as_prev = (
+        prev.get("pull_count", "") == pull_count and prev.get("star_count", "") == star_count
+    )
+    return not (same_as_last and same_as_prev)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect Docker Hub repository stats into CSV")
     parser.add_argument("--output", default="stats/dockerhub.csv", help="Output CSV path")
@@ -128,7 +147,18 @@ def main() -> None:
         if not has_repo and created_at:
             pending_rows.append([created_at, repo, "0", "0", ""])
 
-        pending_rows.append([now, repo, pull_count, star_count, last_updated])
+        repo_existing = [row for row in existing if row.get("repo", "") == repo]
+        repo_pending = [
+            dict(zip(CSV_HEADER, row))
+            for row in pending_rows
+            if len(row) == len(CSV_HEADER) and row[1] == repo
+        ]
+        repo_rows = repo_existing + repo_pending
+
+        if should_append_row(repo_rows, pull_count, star_count):
+            pending_rows.append([now, repo, pull_count, star_count, last_updated])
+        else:
+            print(f"Skip flat-run duplicate for {repo}")
 
     append_rows(output_path, pending_rows)
     if pending_rows:
