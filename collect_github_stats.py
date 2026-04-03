@@ -60,6 +60,39 @@ def append_rows(path: Path, rows: List[List[str]]) -> None:
         writer.writerows(rows)
 
 
+def write_rows(path: Path, rows: List[Dict[str, str]]) -> None:
+    with path.open("w", encoding="utf-8", newline="") as target:
+        writer = csv.writer(target)
+        writer.writerow(CSV_HEADER)
+        for row in rows:
+            writer.writerow([row.get(col, "") for col in CSV_HEADER])
+
+
+def roll_last_row_timestamp(
+    existing: List[Dict[str, str]],
+    pending_rows: List[List[str]],
+    repo: str,
+    now: str,
+    stars: str,
+    forks: str,
+) -> bool:
+    for row in reversed(pending_rows):
+        if len(row) == len(CSV_HEADER) and row[1] == repo:
+            row[0] = now
+            row[2] = stars
+            row[3] = forks
+            return False
+
+    for row in reversed(existing):
+        if row.get("repo", "") == repo:
+            row["ts"] = now
+            row["stars"] = stars
+            row["forks"] = forks
+            return True
+
+    return False
+
+
 def should_append_row(
     repo_rows: List[Dict[str, str]],
     stars: str,
@@ -157,6 +190,8 @@ def main() -> None:
     repos = parse_repos(args.repos)
 
     pending_rows: List[List[str]] = []
+    rewrote_existing = False
+    rolled_rows = 0
 
     for repo in repos:
         if "/" not in repo:
@@ -196,11 +231,23 @@ def main() -> None:
         if should_append_row(repo_rows, stars, forks):
             pending_rows.append([now, repo, stars, forks])
         else:
-            print(f"Skip flat-run duplicate for {repo}")
+            if roll_last_row_timestamp(existing, pending_rows, repo, now, stars, forks):
+                rewrote_existing = True
+            rolled_rows += 1
+            print(f"Rolled timestamp forward for {repo}")
 
-    append_rows(output_path, pending_rows)
-    if pending_rows:
-        print(f"Appended {len(pending_rows)} rows to {output_path}")
+    if rewrote_existing:
+        pending_as_dicts = [
+            dict(zip(CSV_HEADER, row))
+            for row in pending_rows
+            if len(row) == len(CSV_HEADER)
+        ]
+        write_rows(output_path, existing + pending_as_dicts)
+    else:
+        append_rows(output_path, pending_rows)
+
+    if pending_rows or rolled_rows:
+        print(f"Updated {output_path}: appended {len(pending_rows)} row(s), rolled {rolled_rows} row(s)")
     else:
         print("No updates")
 

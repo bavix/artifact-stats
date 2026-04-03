@@ -78,6 +78,42 @@ def append_rows(path: Path, rows: List[List[str]]) -> None:
         writer.writerows(rows)
 
 
+def write_rows(path: Path, rows: List[Dict[str, str]]) -> None:
+    with path.open("w", encoding="utf-8", newline="") as target:
+        writer = csv.writer(target)
+        writer.writerow(CSV_HEADER)
+        for row in rows:
+            writer.writerow([row.get(col, "") for col in CSV_HEADER])
+
+
+def roll_last_row_timestamp(
+    existing: List[Dict[str, str]],
+    pending_rows: List[List[str]],
+    repo: str,
+    now: str,
+    pull_count: str,
+    star_count: str,
+    last_updated: str,
+) -> bool:
+    for row in reversed(pending_rows):
+        if len(row) == len(CSV_HEADER) and row[1] == repo:
+            row[0] = now
+            row[2] = pull_count
+            row[3] = star_count
+            row[4] = last_updated
+            return False
+
+    for row in reversed(existing):
+        if row.get("repo", "") == repo:
+            row["ts"] = now
+            row["pull_count"] = pull_count
+            row["star_count"] = star_count
+            row["last_updated"] = last_updated
+            return True
+
+    return False
+
+
 def should_append_row(
     repo_rows: List[Dict[str, str]],
     pull_count: str,
@@ -122,6 +158,8 @@ def main() -> None:
     if not repos:
         raise ValueError("No repositories provided. Use --repos or DOCKERHUB_REPOS")
     pending_rows: List[List[str]] = []
+    rewrote_existing = False
+    rolled_rows = 0
 
     for repo in repos:
         if "/" not in repo:
@@ -158,11 +196,31 @@ def main() -> None:
         if should_append_row(repo_rows, pull_count, star_count):
             pending_rows.append([now, repo, pull_count, star_count, last_updated])
         else:
-            print(f"Skip flat-run duplicate for {repo}")
+            if roll_last_row_timestamp(
+                existing,
+                pending_rows,
+                repo,
+                now,
+                pull_count,
+                star_count,
+                last_updated,
+            ):
+                rewrote_existing = True
+            rolled_rows += 1
+            print(f"Rolled timestamp forward for {repo}")
 
-    append_rows(output_path, pending_rows)
-    if pending_rows:
-        print(f"Appended {len(pending_rows)} rows to {output_path}")
+    if rewrote_existing:
+        pending_as_dicts = [
+            dict(zip(CSV_HEADER, row))
+            for row in pending_rows
+            if len(row) == len(CSV_HEADER)
+        ]
+        write_rows(output_path, existing + pending_as_dicts)
+    else:
+        append_rows(output_path, pending_rows)
+
+    if pending_rows or rolled_rows:
+        print(f"Updated {output_path}: appended {len(pending_rows)} row(s), rolled {rolled_rows} row(s)")
     else:
         print("No updates")
 
