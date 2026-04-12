@@ -193,8 +193,8 @@ def build_metric_svg(
         ratio = i / y_ticks
         y = plot_top + plot_height * ratio
         value = y_max * (1 - ratio)
-        lines.append(f'<line x1="{plot_left}" y1="{y:.1f}" x2="{plot_right}" y2="{y:.1f}" stroke="#1f2937" stroke-width="1"/>')
-        lines.append(f'<text x="{plot_left - 10}" y="{y + 5:.1f}" text-anchor="end" fill="#9ca3af" font-size="12" font-family="{FONT_FAMILY}">{humanize_count(value)}</text>')
+        lines.append(f'<line x1="{plot_left}" y1="{y:.2f}" x2="{plot_right}" y2="{y:.2f}" stroke="#1f2937" stroke-width="1"/>')
+        lines.append(f'<text x="{plot_left - 10}" y="{y + 5:.2f}" text-anchor="end" fill="#9ca3af" font-size="12" font-family="{FONT_FAMILY}">{humanize_count(value)}</text>')
 
     lines.append(f'<line x1="{plot_left}" y1="{plot_bottom}" x2="{plot_right}" y2="{plot_bottom}" stroke="#4b5563" stroke-width="1.4"/>')
     lines.append(f'<line x1="{plot_left}" y1="{plot_top}" x2="{plot_left}" y2="{plot_bottom}" stroke="#4b5563" stroke-width="1.4"/>')
@@ -209,8 +209,8 @@ def build_metric_svg(
             anchor = "start"
         elif i == tick_count - 1:
             anchor = "end"
-        lines.append(f'<line x1="{x:.1f}" y1="{plot_bottom}" x2="{x:.1f}" y2="{plot_bottom + 6}" stroke="#6b7280" stroke-width="1"/>')
-        lines.append(f'<text x="{x:.1f}" y="{plot_bottom + 26}" text-anchor="{anchor}" fill="#9ca3af" font-size="12" font-family="{FONT_FAMILY}">{tick_dt.strftime("%Y-%m-%d")}</text>')
+        lines.append(f'<line x1="{x:.2f}" y1="{plot_bottom}" x2="{x:.2f}" y2="{plot_bottom + 6}" stroke="#6b7280" stroke-width="1"/>')
+        lines.append(f'<text x="{x:.2f}" y="{plot_bottom + 26}" text-anchor="{anchor}" fill="#9ca3af" font-size="12" font-family="{FONT_FAMILY}">{tick_dt.strftime("%Y-%m-%d")}</text>')
 
     for idx, repo in enumerate(repos):
         points = points_by_repo[repo]
@@ -227,17 +227,17 @@ def build_metric_svg(
 
         latest = points[-1]
         latest_value = getattr(latest, metric_name)
-        lines.append(f'<text x="{x_coord(latest.ts) - 8:.1f}" y="{y_coord(latest_value) - 10:.1f}" text-anchor="end" fill="{point_color}" font-size="12" font-family="{FONT_FAMILY}">{humanize_count(latest_value)}</text>')
+        lines.append(f'<text x="{x_coord(latest.ts) - 8:.2f}" y="{y_coord(latest_value) - 10:.2f}" text-anchor="end" fill="{point_color}" font-size="12" font-family="{FONT_FAMILY}">{humanize_count(latest_value)}</text>')
 
     legend_x = plot_left
     legend_y = height - 34
     for idx, repo in enumerate(repos):
         item_x = legend_x + idx * 190
         _, _, point_color = color_map[repo]
-        lines.append(f'<rect x="{item_x}" y="{legend_y - 12}" width="14" height="14" fill="url(#repo-{idx})" rx="3"/>')
-        lines.append(f'<text x="{item_x + 22}" y="{legend_y}" fill="{point_color}" font-size="13" font-family="{FONT_FAMILY}">{repo}</text>')
+        lines.append(f'<rect x="{item_x:.2f}" y="{legend_y - 12:.2f}" width="14" height="14" fill="url(#repo-{idx})" rx="3"/>')
+        lines.append(f'<text x="{item_x + 22:.2f}" y="{legend_y:.2f}" fill="{point_color}" font-size="13" font-family="{FONT_FAMILY}">{repo}</text>')
 
-    lines.append(f'<text x="{plot_right}" y="{legend_y}" text-anchor="end" fill="#9ca3af" font-size="12" font-family="{FONT_FAMILY}">Source: {source_label}</text>')
+    lines.append(f'<text x="{plot_right:.2f}" y="{legend_y:.2f}" text-anchor="end" fill="#9ca3af" font-size="12" font-family="{FONT_FAMILY}">Source: {source_label}</text>')
     lines.append("</svg>")
     return "\n".join(lines)
 
