@@ -7,98 +7,99 @@
 <rect x="0" y="0" width="1100" height="560" fill="url(#bg)" rx="16"/>
 <text x="90" y="44" fill="#f9fafb" font-size="28" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-weight="700">GripMock Docker Hub Downloads</text>
 <text x="90" y="70" fill="#9ca3af" font-size="16" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Docker Hub pull count by snapshot date</text>
-<line x1="90" y1="90.0" x2="1036" y2="90.0" stroke="#1f2937" stroke-width="1"/>
-<text x="80" y="95.0" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1.7M</text>
-<line x1="90" y1="153.0" x2="1036" y2="153.0" stroke="#1f2937" stroke-width="1"/>
-<text x="80" y="158.0" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1.4M</text>
-<line x1="90" y1="216.0" x2="1036" y2="216.0" stroke="#1f2937" stroke-width="1"/>
-<text x="80" y="221.0" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1.1M</text>
-<line x1="90" y1="279.0" x2="1036" y2="279.0" stroke="#1f2937" stroke-width="1"/>
-<text x="80" y="284.0" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">859.2k</text>
-<line x1="90" y1="342.0" x2="1036" y2="342.0" stroke="#1f2937" stroke-width="1"/>
-<text x="80" y="347.0" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">572.8k</text>
-<line x1="90" y1="405.0" x2="1036" y2="405.0" stroke="#1f2937" stroke-width="1"/>
-<text x="80" y="410.0" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">286.4k</text>
-<line x1="90" y1="468.0" x2="1036" y2="468.0" stroke="#1f2937" stroke-width="1"/>
-<text x="80" y="473.0" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">0</text>
+<line x1="90" y1="90.00" x2="1036" y2="90.00" stroke="#1f2937" stroke-width="1"/>
+<text x="80" y="95.00" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1.72M</text>
+<line x1="90" y1="153.00" x2="1036" y2="153.00" stroke="#1f2937" stroke-width="1"/>
+<text x="80" y="158.00" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1.43M</text>
+<line x1="90" y1="216.00" x2="1036" y2="216.00" stroke="#1f2937" stroke-width="1"/>
+<text x="80" y="221.00" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1.15M</text>
+<line x1="90" y1="279.00" x2="1036" y2="279.00" stroke="#1f2937" stroke-width="1"/>
+<text x="80" y="284.00" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">859.52k</text>
+<line x1="90" y1="342.00" x2="1036" y2="342.00" stroke="#1f2937" stroke-width="1"/>
+<text x="80" y="347.00" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">573.02k</text>
+<line x1="90" y1="405.00" x2="1036" y2="405.00" stroke="#1f2937" stroke-width="1"/>
+<text x="80" y="410.00" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">286.51k</text>
+<line x1="90" y1="468.00" x2="1036" y2="468.00" stroke="#1f2937" stroke-width="1"/>
+<text x="80" y="473.00" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">0</text>
 <line x1="90" y1="468" x2="1036" y2="468" stroke="#4b5563" stroke-width="1.4"/>
 <line x1="90" y1="90" x2="90" y2="468" stroke="#4b5563" stroke-width="1.4"/>
-<line x1="90.0" y1="468" x2="90.0" y2="474" stroke="#6b7280" stroke-width="1"/>
-<text x="90.0" y="494" text-anchor="start" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2019-09-16</text>
-<line x1="279.2" y1="468" x2="279.2" y2="474" stroke="#6b7280" stroke-width="1"/>
-<text x="279.2" y="494" text-anchor="middle" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2021-01-08</text>
-<line x1="468.4" y1="468" x2="468.4" y2="474" stroke="#6b7280" stroke-width="1"/>
-<text x="468.4" y="494" text-anchor="middle" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2022-05-03</text>
-<line x1="657.6" y1="468" x2="657.6" y2="474" stroke="#6b7280" stroke-width="1"/>
-<text x="657.6" y="494" text-anchor="middle" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2023-08-26</text>
-<line x1="846.8" y1="468" x2="846.8" y2="474" stroke="#6b7280" stroke-width="1"/>
-<text x="846.8" y="494" text-anchor="middle" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2024-12-18</text>
-<line x1="1036.0" y1="468" x2="1036.0" y2="474" stroke="#6b7280" stroke-width="1"/>
-<text x="1036.0" y="494" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2026-04-12</text>
-<polyline fill="none" stroke="url(#repo-0)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="90.00,468.00 98.26,462.28 106.51,461.05 114.77,460.99 123.03,460.92 131.28,460.83 139.54,460.72 147.80,460.59 156.05,460.44 164.31,460.28 172.57,460.10 180.83,459.89 189.08,459.68 197.34,458.72 205.60,458.05 213.85,457.78 222.11,457.50 230.37,457.20 238.62,456.14 246.88,452.57 255.14,447.56 263.39,441.84 271.65,436.40 279.91,432.12 288.16,429.46 296.42,428.29 304.68,427.87 312.93,427.44 321.19,426.20 329.45,423.44 337.71,419.34 345.96,414.49 354.22,409.79 362.48,406.10 370.73,403.93 378.99,403.24 387.25,402.72 395.50,402.20 403.76,401.67 412.02,399.49 420.27,394.77 428.53,388.66 436.79,382.03 445.04,375.89 453.30,370.98 461.56,367.52 469.81,365.13 478.07,363.00 486.33,360.18 494.59,355.95 502.84,350.12 511.10,343.05 519.36,335.62 527.61,328.89 535.87,323.72 544.13,320.50 552.38,318.96 560.64,318.30 568.90,317.48 577.15,315.56 585.41,312.06 593.67,307.08 601.92,301.29 610.18,295.65 618.44,291.04 626.69,287.97 634.95,286.32 643.21,285.41 651.47,284.22 659.72,281.78 667.98,277.47 676.24,271.31 684.49,263.91 692.75,256.28 701.01,249.49 709.26,244.31 717.52,240.91 725.78,238.86 734.03,237.26 742.29,235.12 750.55,231.72 758.80,226.87 767.06,221.00 775.32,215.02 783.57,209.97 791.83,206.65 800.09,205.35 808.35,204.91 816.60,204.48 824.86,204.06 833.12,203.65 841.37,203.26 849.63,200.34 857.89,195.47 866.14,190.79 874.40,187.21 882.66,185.21 890.91,184.66 899.17,184.36 907.43,184.08 915.68,183.57 923.94,180.62 932.20,176.05 940.45,170.59 948.71,165.30 956.97,164.28 965.23,164.12 973.48,163.97 981.74,163.84 990.00,163.73 998.25,163.64 1006.51,163.57 1014.77,163.51 1023.02,163.48 1031.28,163.47 1031.68,162.47 1032.05,161.36 1032.45,160.36 1032.84,159.72 1033.24,159.39 1033.63,158.94 1034.03,149.54 1034.42,131.69 1034.81,127.53 1035.21,125.39 1035.60,124.44 1036.00,124.36"/>
+<line x1="90.00" y1="468" x2="90.00" y2="474" stroke="#6b7280" stroke-width="1"/>
+<text x="90.00" y="494" text-anchor="start" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2019-09-16</text>
+<line x1="279.20" y1="468" x2="279.20" y2="474" stroke="#6b7280" stroke-width="1"/>
+<text x="279.20" y="494" text-anchor="middle" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2021-01-08</text>
+<line x1="468.40" y1="468" x2="468.40" y2="474" stroke="#6b7280" stroke-width="1"/>
+<text x="468.40" y="494" text-anchor="middle" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2022-05-03</text>
+<line x1="657.60" y1="468" x2="657.60" y2="474" stroke="#6b7280" stroke-width="1"/>
+<text x="657.60" y="494" text-anchor="middle" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2023-08-26</text>
+<line x1="846.80" y1="468" x2="846.80" y2="474" stroke="#6b7280" stroke-width="1"/>
+<text x="846.80" y="494" text-anchor="middle" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2024-12-19</text>
+<line x1="1036.00" y1="468" x2="1036.00" y2="474" stroke="#6b7280" stroke-width="1"/>
+<text x="1036.00" y="494" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2026-04-13</text>
+<polyline fill="none" stroke="url(#repo-0)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="90.00,468.00 98.25,462.28 106.51,461.05 114.76,461.00 123.01,460.93 131.27,460.83 139.52,460.72 147.77,460.60 156.03,460.45 164.28,460.28 172.53,460.10 180.79,459.90 189.04,459.68 197.29,458.72 205.55,458.06 213.80,457.79 222.05,457.51 230.31,457.21 238.56,456.14 246.81,452.58 255.07,447.57 263.32,441.85 271.57,436.41 279.83,432.13 288.08,429.47 296.33,428.30 304.59,427.89 312.84,427.46 321.09,426.22 329.35,423.46 337.60,419.36 345.85,414.51 354.11,409.81 362.36,406.12 370.61,403.96 378.87,403.26 387.12,402.75 395.37,402.23 403.63,401.69 411.88,399.52 420.13,394.80 428.39,388.69 436.64,382.07 444.89,375.93 453.15,371.02 461.40,367.56 469.65,365.17 477.91,363.04 486.16,360.22 494.41,356.00 502.67,350.16 510.92,343.10 519.17,335.67 527.43,328.94 535.68,323.78 543.93,320.55 552.19,319.01 560.44,318.36 568.69,317.54 576.95,315.62 585.20,312.12 593.45,307.14 601.71,301.35 609.96,295.71 618.22,291.11 626.47,288.04 634.72,286.39 642.98,285.48 651.23,284.29 659.48,281.85 667.74,277.55 675.99,271.39 684.24,263.99 692.50,256.36 700.75,249.58 709.00,244.40 717.26,241.00 725.51,238.95 733.76,237.35 742.02,235.21 750.27,231.81 758.52,226.96 766.78,221.10 775.03,215.12 783.28,210.07 791.54,206.75 799.79,205.45 808.04,205.01 816.30,204.58 824.55,204.16 832.80,203.76 841.06,203.37 849.31,200.44 857.56,195.58 865.82,190.90 874.07,187.31 882.32,185.32 890.58,184.77 898.83,184.47 907.08,184.19 915.34,183.69 923.59,180.73 931.84,176.17 940.10,170.70 948.35,165.41 956.60,164.40 964.86,164.24 973.11,164.09 981.36,163.96 989.62,163.85 997.87,163.76 1006.12,163.69 1014.38,163.63 1022.63,163.60 1030.88,163.59 1031.28,162.59 1031.66,161.48 1032.05,160.48 1032.44,159.84 1032.84,159.51 1033.24,159.06 1033.63,149.67 1034.02,131.82 1034.42,127.66 1034.81,125.52 1035.20,124.57 1035.60,124.50 1036.00,124.36"/>
 <circle cx="90.00" cy="468.00" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="131.28" cy="460.83" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="172.57" cy="460.10" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="213.85" cy="457.78" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="255.14" cy="447.56" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="296.42" cy="428.29" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="337.71" cy="419.34" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="378.99" cy="403.24" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="420.27" cy="394.77" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="461.56" cy="367.52" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="502.84" cy="350.12" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="544.13" cy="320.50" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="585.41" cy="312.06" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="626.69" cy="287.97" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="667.98" cy="277.47" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="709.26" cy="244.31" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="750.55" cy="231.72" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="791.83" cy="206.65" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="833.12" cy="203.65" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="874.40" cy="187.21" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="915.68" cy="183.57" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="956.97" cy="164.28" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="998.25" cy="163.64" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="1031.68" cy="162.47" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="1033.63" cy="158.94" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<circle cx="1035.60" cy="124.44" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="131.27" cy="460.83" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="172.53" cy="460.10" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="213.80" cy="457.79" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="255.07" cy="447.57" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="296.33" cy="428.30" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="337.60" cy="419.36" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="378.87" cy="403.26" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="420.13" cy="394.80" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="461.40" cy="367.56" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="502.67" cy="350.16" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="543.93" cy="320.55" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="585.20" cy="312.12" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="626.47" cy="288.04" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="667.74" cy="277.55" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="709.00" cy="244.40" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="750.27" cy="231.81" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="791.54" cy="206.75" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="832.80" cy="203.76" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="874.07" cy="187.31" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="915.34" cy="183.69" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="956.60" cy="164.40" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="997.87" cy="163.76" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="1031.28" cy="162.59" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="1033.24" cy="159.06" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
+<circle cx="1035.20" cy="124.57" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
 <circle cx="1036.00" cy="124.36" r="3.8" fill="#ffb50c" stroke="#111827" stroke-width="1"/>
-<text x="1028.0" y="114.4" text-anchor="end" fill="#ffb50c" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1.6M</text>
-<polyline fill="none" stroke="url(#repo-1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="653.72,468.00 661.93,467.27 670.14,467.02 678.34,466.86 686.55,466.80 694.76,466.74 702.97,466.67 711.18,466.55 719.38,466.11 727.59,465.42 735.80,464.50 744.01,463.47 752.21,462.42 760.42,461.45 768.63,460.60 776.84,459.83 785.05,459.05 793.25,458.15 801.46,457.04 809.67,455.68 817.88,454.13 826.08,452.48 834.29,450.86 842.50,449.41 850.71,448.17 858.92,447.14 867.12,446.24 875.33,445.35 883.54,444.36 891.75,443.22 899.95,441.93 908.16,440.59 916.37,439.32 924.58,438.22 932.79,437.38 940.99,436.78 949.20,436.36 957.41,435.99 965.62,435.55 973.83,434.95 982.03,434.20 990.24,433.35 998.45,432.52 1006.66,431.86 1014.86,431.45 1023.07,431.43 1031.28,431.42 1031.68,431.17 1032.05,430.93 1032.45,430.70 1032.84,430.58 1033.24,430.54 1033.63,430.46 1034.03,430.27 1034.42,430.00 1034.81,429.66 1035.21,429.34 1035.60,429.04 1036.00,429.00"/>
-<circle cx="653.72" cy="468.00" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="670.14" cy="467.02" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="686.55" cy="466.80" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="702.97" cy="466.67" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="719.38" cy="466.11" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="735.80" cy="464.50" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="752.21" cy="462.42" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="768.63" cy="460.60" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="785.05" cy="459.05" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="801.46" cy="457.04" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="817.88" cy="454.13" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="834.29" cy="450.86" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="850.71" cy="448.17" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="867.12" cy="446.24" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="883.54" cy="444.36" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="899.95" cy="441.93" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="916.37" cy="439.32" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="932.79" cy="437.38" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="949.20" cy="436.36" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="965.62" cy="435.55" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="982.03" cy="434.20" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="998.45" cy="432.52" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="1014.86" cy="431.45" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="1031.28" cy="431.42" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="1032.05" cy="430.93" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="1032.84" cy="430.58" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="1033.63" cy="430.46" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="1034.42" cy="430.00" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="1035.21" cy="429.34" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<circle cx="1036.00" cy="429.00" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
-<text x="1028.0" y="419.0" text-anchor="end" fill="#3bf2af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">177.3k</text>
-<rect x="90" y="514" width="14" height="14" fill="url(#repo-0)" rx="3"/>
-<text x="112" y="526" fill="#ffb50c" font-size="13" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">tkpd/gripmock</text>
-<rect x="280" y="514" width="14" height="14" fill="url(#repo-1)" rx="3"/>
-<text x="302" y="526" fill="#3bf2af" font-size="13" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">bavix/gripmock</text>
-<text x="1036" y="526" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Source: https://github.com/bavix/artifact-stats/blob/master/stats/dockerhub.csv</text>
+<text x="1028.00" y="114.36" text-anchor="end" fill="#ffb50c" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1.56M</text>
+<polyline fill="none" stroke="url(#repo-1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="653.48,468.00 661.69,467.28 669.89,467.02 678.10,466.86 686.30,466.80 694.51,466.74 702.71,466.67 710.91,466.55 719.12,466.11 727.32,465.42 735.53,464.50 743.73,463.47 751.94,462.42 760.14,461.46 768.34,460.61 776.55,459.84 784.75,459.06 792.96,458.15 801.16,457.04 809.37,455.69 817.57,454.13 825.77,452.48 833.98,450.87 842.18,449.42 850.39,448.18 858.59,447.15 866.80,446.25 875.00,445.36 883.20,444.37 891.41,443.23 899.61,441.94 907.82,440.60 916.02,439.33 924.23,438.23 932.43,437.39 940.64,436.79 948.84,436.37 957.04,436.00 965.25,435.56 973.45,434.97 981.66,434.21 989.86,433.36 998.07,432.54 1006.27,431.87 1014.47,431.47 1022.68,431.45 1030.88,431.44 1031.28,431.18 1031.66,430.95 1032.05,430.72 1032.44,430.59 1032.84,430.55 1033.24,430.47 1033.63,430.29 1034.02,430.01 1034.42,429.68 1034.81,429.35 1035.20,429.06 1035.60,429.01 1036.00,428.87"/>
+<circle cx="653.48" cy="468.00" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="669.89" cy="467.02" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="686.30" cy="466.80" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="702.71" cy="466.67" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="719.12" cy="466.11" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="735.53" cy="464.50" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="751.94" cy="462.42" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="768.34" cy="460.61" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="784.75" cy="459.06" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="801.16" cy="457.04" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="817.57" cy="454.13" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="833.98" cy="450.87" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="850.39" cy="448.18" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="866.80" cy="446.25" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="883.20" cy="444.37" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="899.61" cy="441.94" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="916.02" cy="439.33" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="932.43" cy="437.39" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="948.84" cy="436.37" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="965.25" cy="435.56" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="981.66" cy="434.21" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="998.07" cy="432.54" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1014.47" cy="431.47" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1030.88" cy="431.44" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1031.66" cy="430.95" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1032.44" cy="430.59" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1033.24" cy="430.47" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1034.02" cy="430.01" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1034.81" cy="429.35" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1035.60" cy="429.01" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<circle cx="1036.00" cy="428.87" r="3.8" fill="#3bf2af" stroke="#111827" stroke-width="1"/>
+<text x="1028.00" y="418.87" text-anchor="end" fill="#3bf2af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">177.94k</text>
+<rect x="90.00" y="514.00" width="14" height="14" fill="url(#repo-0)" rx="3"/>
+<text x="112.00" y="526.00" fill="#ffb50c" font-size="13" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">tkpd/gripmock</text>
+<rect x="280.00" y="514.00" width="14" height="14" fill="url(#repo-1)" rx="3"/>
+<text x="302.00" y="526.00" fill="#3bf2af" font-size="13" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">bavix/gripmock</text>
+<text x="1036.00" y="526.00" text-anchor="end" fill="#9ca3af" font-size="12" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Source: https://github.com/bavix/artifact-stats/blob/master/stats/dockerhub.csv</text>
 </svg>
