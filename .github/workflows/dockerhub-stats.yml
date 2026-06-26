@@ -22,7 +22,7 @@ jobs:
       DOCKERHUB_SOURCE_URL: https://github.com/bavix/artifact-stats/blob/master/stats/dockerhub.csv
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Setup Python
         uses: actions/setup-python@v6
