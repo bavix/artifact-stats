@@ -2,6 +2,21 @@
 
 Automated weekly digest for GitHub and Docker Hub metrics.
 
+## Week 2026-W43 (ending 2026-10-25, UTC)
+
+### Docker Hub
+- bavix/gripmock: pull_count +14,703 (+3.05%) to 496,508; star_count +0 (+0.00%) to 1.
+- tkpd/gripmock: pull_count +25,973 (+1.39%) to 1,896,268; star_count +0 (+0.00%) to 2.
+
+### GitHub
+- bavix/gripmock: stars +0 (+0.00%) to 78; forks +0 (+0.00%) to 12.
+- tokopedia/gripmock: stars +0 (+0.00%) to 746; forks +0 (+0.00%) to 168.
+
+### Highlights
+- Biggest absolute increase: tkpd/gripmock Docker Hub pull_count (+25,973).
+- Highest relative growth: bavix/gripmock Docker Hub pull_count (+3.05%).
+- No declines detected across tracked metrics.
+
 ## Week 2026-W42 (ending 2026-10-18, UTC)
 
 ### Docker Hub
